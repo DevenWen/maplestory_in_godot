@@ -1,4 +1,5 @@
 extends Node
+class_name MapleResource
 
 enum {LOAD_OK, LOAD_FAIL}
 
@@ -9,10 +10,8 @@ var WZ = WZNode.new(null, "", {})
 func _ready():
 	# test code
 	print("ready for MapleResources.")
-	var result = get_wz_path("Charactor/00002000.img/heal/0")
-	print(result.data)
 	
-func get_wz_path(path):
+func get_by_path(path: String):
 	# path example: Character/00002000.img/motion/index
 	# 判断缓存是否有，有则直接索引返回；
 	# 缓存上没有，则加载文件，并初始化；
@@ -24,7 +23,7 @@ func get_wz_path(path):
 		return find_for_sub_path(data, sub_path)
 	else:
 		if (load_wz_file(file_path) == LOAD_OK):
-			return get_wz_path(path)
+			return get_by_path(path)
 		else:
 			printerr("get wz path fail: ", path)
 			return {}
@@ -47,14 +46,6 @@ static func find_for_sub_path(data: WZNode, sub_path: String):
 	# 循环获取 sub_path 的数据
 	var path = sub_path.split("/", false)
 	return data.find(path)
-	
-static func init_wz_data(json_data):
-	# TODO
-	# 递归便利对象
-	# 发现 image 数据，都直接转化成 Image 对象
-	# 发现 音频 数据，TODO 处理
-	# 构建一个回溯指针，指向父节点
-	return json_data
 
 static func createWzNode(parent, data):
 	# if data["type"] != 'object'
@@ -82,7 +73,7 @@ class WZNode:
 		# 递归构建 WZNode 对象
 		self.parent = parent
 		self.name = name
-		self.data = data
+		self.data = resolveData(data)
 	
 	func find(path: Array):
 		# 索引查找数据
@@ -100,13 +91,30 @@ class WZNode:
 		printerr("can not find wznode path: ", path, " current node: ", self)
 		return null
 		
+	# 数据转换方法
+	static func resolveData(data):
+		match data.get("type"):
+			# 图片
+			"canvas": 
+				# 将数据转化为 texture
+				var image_source = data["_image"]
+				var image_ = Image.new()
+				image_.load_png_from_buffer(Marshalls.base64_to_raw(image_source.uri))
+				var texture = ImageTexture.create_from_image(image_)
+				data._image.texture = texture
+				data._image.uri = null
+				return data
+			# 音频等数据结构 TODO
+			_: 
+				return data
+		
 class UOLWZNode extends WZNode:
 	var uol_path: String
 	
 	func _init(parent, name, data, path):
 		self.name = name
 		self.parent = parent
-		self.data = data
+		self.data = resolveData(data)
 		self.uol_path = path
 	
 	func find(path: Array):

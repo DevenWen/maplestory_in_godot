@@ -15,6 +15,10 @@ run/main_scene="res://script/player.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MapleResources="*res://assets/maple_resources.gd"
+
 [display]
 
 window/size/viewport_width=640
