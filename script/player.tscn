@@ -1,11 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://cipfo8j1dgaox"]
+[gd_scene load_steps=6 format=3 uid="uid://cipfo8j1dgaox"]
 
+[ext_resource type="Script" path="res://script/player.gd" id="1_mw56t"]
 [ext_resource type="Texture2D" uid="uid://nm0n38h80xjd" path="res://icon.svg" id="1_r5uyq"]
 [ext_resource type="Script" path="res://script/Body.gd" id="2_n6vlk"]
+[ext_resource type="Script" path="res://script/Arm.gd" id="4_ehsvk"]
+[ext_resource type="Script" path="res://script/Head.gd" id="5_ean3q"]
 
 [node name="Player" type="Node2D"]
+script = ExtResource("1_mw56t")
+frame = 1
 
 [node name="Body" type="Sprite2D" parent="."]
-position = Vector2(88, 86)
+position = Vector2(0, 1)
 texture = ExtResource("1_r5uyq")
 script = ExtResource("2_n6vlk")
+
+[node name="Arm" type="Sprite2D" parent="."]
+script = ExtResource("4_ehsvk")
+
+[node name="Head" type="Sprite2D" parent="."]
+script = ExtResource("5_ean3q")
