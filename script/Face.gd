@@ -1,16 +1,17 @@
 extends Container
 
-class_name CharactorSprite
+class_name FaceSprite
 
-@export var img = "00012000.img"
+@export var img = "00020000.img"
+@export var motion = "default"
+@export var frame = 0 
 @onready var WZLib = get_node("/root/MapleResources") as MapleResource
-@onready var charactor = find_parent("Player") as Charactor
 
 func draw(draw_map):
 	# 读取 body 的数据；
 	# 渲染 body 数据中的 贴图集 
 	# 计算 body 的偏移
-	var wznode = WZLib.get_by_path("Character/%s/%s/%d" % [self.img, charactor.motion, charactor.frame])
+	var wznode = WZLib.get_by_path("Character/Face/%s/%s/%d" % [self.img, self.motion, self.frame])
 	
 	# 绘制
 	# var data = wznode.data

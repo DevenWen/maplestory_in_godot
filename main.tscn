@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ce6lpywnohgj"]
+[gd_scene load_steps=5 format=3 uid="uid://ce6lpywnohgj"]
 
 [ext_resource type="PackedScene" uid="uid://cipfo8j1dgaox" path="res://script/player.tscn" id="1_ysgrg"]
 [ext_resource type="Script" path="res://Node2D.gd" id="3_2joum"]
 [ext_resource type="Texture2D" uid="uid://nm0n38h80xjd" path="res://icon.svg" id="3_pdglm"]
+[ext_resource type="Script" path="res://DemoButton.gd" id="4_l41oc"]
 
 [node name="Main" type="Node2D"]
 
@@ -17,8 +18,17 @@ position = Vector2(100, 101)
 texture = ExtResource("3_pdglm")
 
 [node name="Player" parent="." instance=ExtResource("1_ysgrg")]
-position = Vector2(100, 100)
+position = Vector2(167, 138)
 scale = Vector2(1, 0.967)
+motion = "walk1"
 
 [node name="Helper" type="Node2D" parent="."]
+visible = false
 script = ExtResource("3_2joum")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 66.0
+offset_top = 76.0
+offset_right = 74.0
+offset_bottom = 84.0
+script = ExtResource("4_l41oc")

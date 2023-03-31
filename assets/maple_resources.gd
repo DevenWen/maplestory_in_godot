@@ -20,7 +20,11 @@ func get_by_path(path: String):
 	var sub_path = ss[1]
 	if WZ.children.has(file_path):
 		var data = WZ.children.get(file_path) as WZNode
-		return find_for_sub_path(data, sub_path)
+		var result =  find_for_sub_path(data, sub_path)
+		if result != null:
+			return result.resolve_uol()
+		else:
+			return {}
 	else:
 		if (load_wz_file(file_path) == LOAD_OK):
 			return get_by_path(path)
@@ -36,7 +40,7 @@ func load_wz_file(file_path):
 		printerr("Load wz file fail ", file_path, " reason: ", error)
 		return LOAD_FAIL
 	var data = JSON.parse_string(file.get_as_text())
-	WZ.children[file_path] = createWzNode(WZ, data)
+	WZ.children[file_path] = create_wz_node(WZ, data)
 	print("Load wz file success ", path)
 	return OK
 	
@@ -47,7 +51,7 @@ static func find_for_sub_path(data: WZNode, sub_path: String):
 	var path = sub_path.split("/", false)
 	return data.find(path)
 
-static func createWzNode(parent, data):
+static func create_wz_node(parent, data):
 	# if data["type"] != 'object'
 	if typeof(data) != TYPE_DICTIONARY:
 		return null;
@@ -59,9 +63,67 @@ static func createWzNode(parent, data):
 	
 	var result = WZNode.new(parent, name, data)	
 	for sub_name in data.get("_keys", {}):
-		result.children[sub_name] = createWzNode(result, data[sub_name])
+		result.children[sub_name] = create_wz_node(result, data[sub_name])
 		
 	return result
+
+static func is_canvas(data):
+	return typeof(data) == TYPE_DICTIONARY and data.type == "canvas"
+
+static func create_sprite(draw_map, data):
+	if (is_canvas(data)):
+		
+		var sprite = Sprite2D.new()
+		sprite.texture = data._image.texture
+		var origin = off_set(draw_map, data)
+		print_debug("draw: ", data.name, origin)
+		print_debug("after offset: ", draw_map)
+		sprite.position = origin
+		sprite.offset += (sprite.texture.get_size() / 2)
+		return sprite
+	else:
+		printerr("error, no canvas found for sprite")
+		print_stack()
+		return null
+
+static func off_set(draw_map, data):
+	var origin = Vector2(-data.origin.X, -data.origin.Y)
+	var name = data.name
+	var map = data.map as Dictionary
+	var result
+	
+	for key in map["_keys"]:
+		var m = map[key]
+		draw_map["%s/%s"%[name, key]] = Vector2(-m.X, -m.Y)
+	
+	if map.has("brow"):
+		var brow = Vector2(-map.brow.X, -map.brow.Y)
+		result = origin + get_or(draw_map, "head/neck") - get_or(draw_map, "body/neck") - get_or(draw_map, "head/brow") + brow
+	
+	if  map.has("neck"):
+		var neck = Vector2(-map.neck.X, -map.neck.Y)
+		result = origin + get_or(draw_map, "head/neck") - get_or(draw_map, "body/neck")
+	
+	if map.has("hand"):
+		var hand = Vector2(-map.hand.X, -map.hand.Y)
+		result = origin + get_or(draw_map, "arm/navel") - get_or(draw_map, "body/navel") - get_or(draw_map, "arm/hand") + hand
+	
+	if map.has("handMove"):
+		var handMove = Vector2(-map.handMove.X, -map.handMove.Y)
+		result = origin - get_or(draw_map, "lHand/handMove") + handMove
+	
+	if map.has("navel"):
+		var navel = Vector2(-map.navel.X, -map.navel.Y)
+		result = origin - get_or(draw_map, "body/navel") + navel
+	
+	return result
+			
+static func get_or(map, key):
+	if map.has(key): 
+		return map[key]
+	else:
+		return Vector2()
+	
 	
 class WZNode:
 	var parent = null
@@ -73,7 +135,7 @@ class WZNode:
 		# 递归构建 WZNode 对象
 		self.parent = parent
 		self.name = name
-		self.data = resolveData(data)
+		self.data = resolve_data(data)
 	
 	func find(path: Array):
 		# 索引查找数据
@@ -86,13 +148,27 @@ class WZNode:
 			null: 
 				return self
 			_:
-				return children[next].find(path) 
+				if children.has(next):
+					return children[next].find(path) 
 		
 		printerr("can not find wznode path: ", path, " current node: ", self)
 		return null
+	
+	func is_type(type): return type == "WZNode"
+		
+	func resolve_uol():
+		# 递归解析 uol 引用
+		var children_resolved = {}
+		for name in children:
+			var child = children[name] as WZNode
+			if child != null and child.is_type("UOLWZNode"):
+				child = child.resolve_uol()
+			children_resolved[name] = child
+		self.children = children_resolved
+		return self
 		
 	# 数据转换方法
-	static func resolveData(data):
+	static func resolve_data(data):
 		match data.get("type"):
 			# 图片
 			"canvas": 
@@ -114,10 +190,15 @@ class UOLWZNode extends WZNode:
 	func _init(parent, name, data, path):
 		self.name = name
 		self.parent = parent
-		self.data = resolveData(data)
+		self.data = resolve_data(data)
 		self.uol_path = path
 	
 	func find(path: Array):
 		path.append_array(self.uol_path.split("/", false))
 		return self.parent.find(path)
 	
+	func is_type(type): return type == "UOLWZNode"
+
+	func resolve_uol():
+		var node = find([]) as WZNode
+		return node.resolve_uol()
