@@ -20,7 +20,7 @@ texture = ExtResource("3_pdglm")
 [node name="Player" parent="." instance=ExtResource("1_ysgrg")]
 position = Vector2(167, 138)
 scale = Vector2(1, 0.967)
-motion = "rope"
+motion = "walk1"
 
 [node name="Helper" type="Node2D" parent="."]
 visible = false

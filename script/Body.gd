@@ -18,6 +18,7 @@ func free_sprite_by_part(part):
 	if part_to_sprite.has(part):
 		var sprite = part_to_sprite[part] as Sprite2D
 		sprite.queue_free()
+		part_to_sprite.erase(part)
 
 func draw(draw_map):
 	

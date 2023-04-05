@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cipfo8j1dgaox"]
+[gd_scene load_steps=9 format=3 uid="uid://cipfo8j1dgaox"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_mw56t"]
 [ext_resource type="Script" path="res://script/Body.gd" id="2_n6vlk"]
 [ext_resource type="Script" path="res://script/Face.gd" id="3_3lehe"]
+[ext_resource type="Script" path="res://script/Head.gd" id="3_875og"]
 [ext_resource type="Script" path="res://script/Hair.gd" id="4_wylno"]
 [ext_resource type="Script" path="res://script/Cap.gd" id="5_43jph"]
+[ext_resource type="Script" path="res://script/Player/CharactorAnimation.gd" id="8_j13mk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k5jf8"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_mw56t")
@@ -20,20 +24,23 @@ img = "00002000.img"
 [node name="Head" type="Container" parent="Marker2D"]
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("2_n6vlk")
+script = ExtResource("3_875og")
 
-[node name="Face" type="Container" parent="Marker2D"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Hair" type="Container" parent="Marker2D/Head"]
+layout_mode = 2
+script = ExtResource("4_wylno")
+img = "Hair/00030054.img"
+
+[node name="Cap" type="Container" parent="Marker2D/Head/Hair"]
+layout_mode = 2
+script = ExtResource("5_43jph")
+img = "Cap/01001023.img"
+
+[node name="Face" type="Container" parent="Marker2D/Head"]
+layout_mode = 2
 script = ExtResource("3_3lehe")
 motion = "hit"
 img = "Face/00020000.img"
-
-[node name="Hair" type="Container" parent="Marker2D"]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_wylno")
-img = "Hair/00030054.img"
 
 [node name="Coat" type="Container" parent="Marker2D"]
 offset_right = 40.0
@@ -52,12 +59,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_n6vlk")
 img = "Shoes/01072324.img"
-
-[node name="Cap" type="Container" parent="Marker2D"]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("5_43jph")
-img = "Cap/01001023.img"
 
 [node name="Glove" type="Container" parent="Marker2D"]
 offset_right = 40.0
@@ -82,3 +83,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_n6vlk")
 img = "Cape/01102081.img"
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_k5jf8")
+script = ExtResource("8_j13mk")
+
+[connection signal="frame_changed" from="Animation" to="." method="_on_charactor_animation_frame_changed"]

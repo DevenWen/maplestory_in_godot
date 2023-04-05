@@ -1,1 +1,1426 @@
-{"name":"00012000.img","_keys":["info","front","back","walk1","walk2","stand1","stand2","alert","swingO2","swingO2","swingO3","swingOF","swingT1","swingT2","swingT3","swingTF","swingP1","swingP2","swingPF","stabO1","stabO2","stabOF","stabT1","stabT2","stabTF","shoot1","shoot2","shootF","proneStab","prone","heal","fly","jump","sit","ladder","rope"],"info":{"name":"info","_keys":["islot","vslot","cash"],"islot":"Hd","vslot":"Hd","cash":0},"front":{"name":"front","_keys":["head"],"head":{"name":"head","_keys":["origin","map","z","group"],"type":"canvas","_image":{"width":39,"height":35,"uri":"iVBORw0KGgoAAAANSUhEUgAAACcAAAAjCAYAAAAXMhMjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJtSURBVFhHzZeBdaswDEUzS1foCl2hK3SFrNAVskJWyAqswApZwdUTkiwbAQacnPqceyDG6F2MTf+/HGxpB29pFpjSc53nKAxeEnRvbUKGimXBNN4ZrYWiPVoQ7igkNhDBHpJ8M1WNicKbyLOYhtshwVhICUN3MD5MLg2/uwRjIRAFHcVm71/KyeyN7bMXS4Eo4Awm1z57sRiIAs5QybUIxmIgCjiM27GNcrEUCANO4GftlFxU/CyFGDbEtCnWBF8vxdSvNIu1yYVFexGvt/S4Ej8bcmHBnizJfad0/1qRC4u9gONyfifROX7XxVehmSkIxhRysuYgd/tYkStuIHwRFl0IQz9/HvyD1VT3az+L0XqjWduWG2ggT7UeCQsQNGRJptqB4YPaWLpOcs/8SmeCvBn4yMUgJshaSHc6cl8dhADq43GfAo3H70LQgT/2ep/0cba9ibEQbJADCJZQE6NzWS8GxqGPPg0aPgf16ah1fL1K0H7kp/GCFAIpnhEJ9MXQr1IYtykmaI0sMtWAQy2HgXyONcEFnCDgYArVooBfqci3SgG/7nRiZEOwy0yOFjqf800QhBSKqaCslRq3djaZ3U85Tk5nTV0gh5YH4aI+WVRUbrajv+ZFmIUHclimUYqh2UU791MPTCiikmxB5X0Nfgvx/8p4kB6PEzyU/w1YTJeNLAt8jGXdsU3QOshVzMR0DV+nrBvt0Cy1KKYtDtlNtB6zlIDWJOVbDmDq4CVkfL1e3WtE7SniXHMB2PK1pIoHMsDNlJPqIqaNC4bhhrumQu5jrDVQ7FVtkpR/TucZcUi/jnW8rUXhNZ3a5fIHrxekrAidqe8AAAAASUVORK5CYII="},"origin":{"name":"origin","type":"vector","X":19,"Y":17},"map":{"name":"map","_keys":["neck","earOverHead","earBelowHead","brow"],"neck":{"name":"neck","type":"vector","X":0,"Y":15},"earOverHead":{"name":"earOverHead","type":"vector","X":15,"Y":10},"earBelowHead":{"name":"earBelowHead","type":"vector","X":-17,"Y":9},"brow":{"name":"brow","type":"vector","X":-4,"Y":-5}},"z":"head","group":"skin"}},"back":{"name":"back","_keys":["head"],"head":{"name":"head","_keys":["origin","map","z","group"],"type":"canvas","_image":{"width":41,"height":35,"uri":"iVBORw0KGgoAAAANSUhEUgAAACkAAAAjCAYAAAAJ+yOQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIGSURBVFhHzZYNccMwDEYLbhRGYRRGYRRKoRRKIRRKYRQ8/ViOrHzOOY7XVndvTRZbepXjpJdJkXZ4WVQi6feR6E+Gjvk8E8cS/x5SqJaK5GtO1GM5ONns6JDLBKkNj5tgOTn5jKDkCxYykMweWTQ97lNENSkSM6JAL0W0dHUoSIKSITEDFT9CEb0OiVKSnSVGBUeg5S6iy3FRLMegYsNQI0o3jy07TaZviAQZWOwETjItP92iWI5BRc7iJQmurxr7gQUZVOQsA5I68VmC4Z4UOpb8SXIGkLx/H5SEiWfiHkFF8uvNJKMgsxzpJEo6FbDUbyfp3zaV5P7GkYuUYZtwOo0uMqvkRlQm6idKOhnpYquTutzp9rERlcn6Sd+yJORjfz4JJGfkR1CUpIkqosc+4Wsl0+2ziNLEVQSL+vMJILnMKqg4yTXBVnI2jXuRqbpIhLePS3Kmc3Z7eMJ1JMfQhmEpfuPELlrUyXiSPx/GSzYE6ZEjiCDz2ZTkqCbLeVWwF+ugCbJc63FzhR1sCVqUBHJcCvXg5LzIHiaYpXoELWyQToRCiANyTBAMHA4VQFL+GIm0kHtQl5fza5nzQcnpvipygVKcOuNlIrJJaAwzWdBCksLiBi8fbwb4f4K7t/6onS7oQ2VL1/wObUFyNMbmcpJnhcpCqRoby5NeFU1Zu8aDxuNy+QPuVdgjD/fHCQAAAABJRU5ErkJggg=="},"origin":{"name":"origin","type":"vector","X":20,"Y":17},"map":{"name":"map","_keys":["neck","brow"],"neck":{"name":"neck","type":"vector","X":0,"Y":15},"brow":{"name":"brow","type":"vector","X":-4,"Y":-5}},"z":"backHead","group":"skin"}},"walk1":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"3":{"name":"3","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"walk1","_keys":["0","1","2","3"]},"walk2":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"3":{"name":"3","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"walk2","_keys":["0","1","2","3"]},"stand1":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"stand1","_keys":["0","1","2"]},"stand2":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"stand2","_keys":["0","1","2"]},"alert":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"alert","_keys":["0","1","2"]},"swingO2":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingO2","_keys":["0","1","2"]},"swingO3":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingO3","_keys":["0","1","2"]},"swingOF":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../back/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"3":{"name":"3","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingOF","_keys":["0","1","2","3"]},"swingT1":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingT1","_keys":["0","1","2"]},"swingT2":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingT2","_keys":["0","1","2"]},"swingT3":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingT3","_keys":["0","1","2"]},"swingTF":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../back/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"3":{"name":"3","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingTF","_keys":["0","1","2","3"]},"swingP1":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingP1","_keys":["0","1","2"]},"swingP2":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingP2","_keys":["0","1","2"]},"swingPF":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"3":{"name":"3","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"swingPF","_keys":["0","1","2","3"]},"stabO1":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"stabO1","_keys":["0","1"]},"stabO2":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"stabO2","_keys":["0","1"]},"stabOF":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"stabOF","_keys":["0","1","2"]},"stabT1":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"stabT1","_keys":["0","1","2"]},"stabT2":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"stabT2","_keys":["0","1","2"]},"stabTF":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"3":{"name":"3","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"stabTF","_keys":["0","1","2","3"]},"shoot1":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"shoot1","_keys":["0","1","2"]},"shoot2":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"3":{"name":"3","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"4":{"name":"4","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"shoot2","_keys":["0","1","2","3","4"]},"shootF":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"shootF","_keys":["0","1","2"]},"proneStab":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../prone/0/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"proneStab","_keys":["0","1"]},"prone":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"prone","_keys":["0"]},"heal":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"2":{"name":"2","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"heal","_keys":["0","1","2"]},"fly":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"fly","_keys":["0","1"]},"jump":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"jump","_keys":["0"]},"sit":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../front/head","type":"uol"}},"name":"sit","_keys":["0"]},"ladder":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../back/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../back/head","type":"uol"}},"name":"ladder","_keys":["0","1"]},"rope":{"0":{"name":"0","_keys":["head"],"head":{"name":"head","path":"../../back/head","type":"uol"}},"1":{"name":"1","_keys":["head"],"head":{"name":"head","path":"../../back/head","type":"uol"}},"name":"rope","_keys":["0","1"]}}
+{
+	"name": "00012000.img",
+	"_keys": [
+		"info",
+		"front",
+		"back",
+		"walk1",
+		"walk2",
+		"stand1",
+		"stand2",
+		"alert",
+		"swingO2",
+		"swingO2",
+		"swingO3",
+		"swingOF",
+		"swingT1",
+		"swingT2",
+		"swingT3",
+		"swingTF",
+		"swingP1",
+		"swingP2",
+		"swingPF",
+		"stabO1",
+		"stabO2",
+		"stabOF",
+		"stabT1",
+		"stabT2",
+		"stabTF",
+		"shoot1",
+		"shoot2",
+		"shootF",
+		"proneStab",
+		"prone",
+		"heal",
+		"fly",
+		"jump",
+		"sit",
+		"ladder",
+		"rope"
+	],
+	"info": {
+		"name": "info",
+		"_keys": [
+			"islot",
+			"vslot",
+			"cash"
+		],
+		"islot": "Hd",
+		"vslot": "Hd",
+		"cash": 0
+	},
+	"front": {
+		"name": "front",
+		"_keys": [
+			"head"
+		],
+		"head": {
+			"name": "head",
+			"_keys": [
+				"origin",
+				"map",
+				"z",
+				"group"
+			],
+			"type": "canvas",
+			"_image": {
+				"width": 39,
+				"height": 35,
+				"uri": "iVBORw0KGgoAAAANSUhEUgAAACcAAAAjCAYAAAAXMhMjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJtSURBVFhHzZeBdaswDEUzS1foCl2hK3SFrNAVskJWyAqswApZwdUTkiwbAQacnPqceyDG6F2MTf+/HGxpB29pFpjSc53nKAxeEnRvbUKGimXBNN4ZrYWiPVoQ7igkNhDBHpJ8M1WNicKbyLOYhtshwVhICUN3MD5MLg2/uwRjIRAFHcVm71/KyeyN7bMXS4Eo4Awm1z57sRiIAs5QybUIxmIgCjiM27GNcrEUCANO4GftlFxU/CyFGDbEtCnWBF8vxdSvNIu1yYVFexGvt/S4Ej8bcmHBnizJfad0/1qRC4u9gONyfifROX7XxVehmSkIxhRysuYgd/tYkStuIHwRFl0IQz9/HvyD1VT3az+L0XqjWduWG2ggT7UeCQsQNGRJptqB4YPaWLpOcs/8SmeCvBn4yMUgJshaSHc6cl8dhADq43GfAo3H70LQgT/2ep/0cba9ibEQbJADCJZQE6NzWS8GxqGPPg0aPgf16ah1fL1K0H7kp/GCFAIpnhEJ9MXQr1IYtykmaI0sMtWAQy2HgXyONcEFnCDgYArVooBfqci3SgG/7nRiZEOwy0yOFjqf800QhBSKqaCslRq3djaZ3U85Tk5nTV0gh5YH4aI+WVRUbrajv+ZFmIUHclimUYqh2UU791MPTCiikmxB5X0Nfgvx/8p4kB6PEzyU/w1YTJeNLAt8jGXdsU3QOshVzMR0DV+nrBvt0Cy1KKYtDtlNtB6zlIDWJOVbDmDq4CVkfL1e3WtE7SniXHMB2PK1pIoHMsDNlJPqIqaNC4bhhrumQu5jrDVQ7FVtkpR/TucZcUi/jnW8rUXhNZ3a5fIHrxekrAidqe8AAAAASUVORK5CYII="
+			},
+			"origin": {
+				"name": "origin",
+				"type": "vector",
+				"X": 19,
+				"Y": 17
+			},
+			"map": {
+				"name": "map",
+				"_keys": [
+					"neck",
+					"earOverHead",
+					"earBelowHead",
+					"brow"
+				],
+				"neck": {
+					"name": "neck",
+					"type": "vector",
+					"X": 0,
+					"Y": 15
+				},
+				"earOverHead": {
+					"name": "earOverHead",
+					"type": "vector",
+					"X": 15,
+					"Y": 10
+				},
+				"earBelowHead": {
+					"name": "earBelowHead",
+					"type": "vector",
+					"X": -17,
+					"Y": 9
+				},
+				"brow": {
+					"name": "brow",
+					"type": "vector",
+					"X": -4,
+					"Y": -5
+				}
+			},
+			"z": "head",
+			"group": "skin"
+		}
+	},
+	"back": {
+		"name": "back",
+		"_keys": [
+			"head"
+		],
+		"head": {
+			"name": "head",
+			"_keys": [
+				"origin",
+				"map",
+				"z",
+				"group"
+			],
+			"type": "canvas",
+			"_image": {
+				"width": 41,
+				"height": 35,
+				"uri": "iVBORw0KGgoAAAANSUhEUgAAACkAAAAjCAYAAAAJ+yOQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIGSURBVFhHzZYNccMwDEYLbhRGYRRGYRRKoRRKIRRKYRQ8/ViOrHzOOY7XVndvTRZbepXjpJdJkXZ4WVQi6feR6E+Gjvk8E8cS/x5SqJaK5GtO1GM5ONns6JDLBKkNj5tgOTn5jKDkCxYykMweWTQ97lNENSkSM6JAL0W0dHUoSIKSITEDFT9CEb0OiVKSnSVGBUeg5S6iy3FRLMegYsNQI0o3jy07TaZviAQZWOwETjItP92iWI5BRc7iJQmurxr7gQUZVOQsA5I68VmC4Z4UOpb8SXIGkLx/H5SEiWfiHkFF8uvNJKMgsxzpJEo6FbDUbyfp3zaV5P7GkYuUYZtwOo0uMqvkRlQm6idKOhnpYquTutzp9rERlcn6Sd+yJORjfz4JJGfkR1CUpIkqosc+4Wsl0+2ziNLEVQSL+vMJILnMKqg4yTXBVnI2jXuRqbpIhLePS3Kmc3Z7eMJ1JMfQhmEpfuPELlrUyXiSPx/GSzYE6ZEjiCDz2ZTkqCbLeVWwF+ugCbJc63FzhR1sCVqUBHJcCvXg5LzIHiaYpXoELWyQToRCiANyTBAMHA4VQFL+GIm0kHtQl5fza5nzQcnpvipygVKcOuNlIrJJaAwzWdBCksLiBi8fbwb4f4K7t/6onS7oQ2VL1/wObUFyNMbmcpJnhcpCqRoby5NeFU1Zu8aDxuNy+QPuVdgjD/fHCQAAAABJRU5ErkJggg=="
+			},
+			"origin": {
+				"name": "origin",
+				"type": "vector",
+				"X": 20,
+				"Y": 17
+			},
+			"map": {
+				"name": "map",
+				"_keys": [
+					"neck",
+					"brow"
+				],
+				"neck": {
+					"name": "neck",
+					"type": "vector",
+					"X": 0,
+					"Y": 15
+				},
+				"brow": {
+					"name": "brow",
+					"type": "vector",
+					"X": -4,
+					"Y": -5
+				}
+			},
+			"z": "backHead",
+			"group": "skin"
+		}
+	},
+	"walk1": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"3": {
+			"name": "3",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "walk1",
+		"_keys": [
+			"0",
+			"1",
+			"2",
+			"3"
+		]
+	},
+	"walk2": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"3": {
+			"name": "3",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "walk2",
+		"_keys": [
+			"0",
+			"1",
+			"2",
+			"3"
+		]
+	},
+	"stand1": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "stand1",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"stand2": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "stand2",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"alert": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "alert",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"swingO2": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingO2",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"swingO3": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingO3",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"swingOF": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../back/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"3": {
+			"name": "3",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingOF",
+		"_keys": [
+			"0",
+			"1",
+			"2",
+			"3"
+		]
+	},
+	"swingT1": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingT1",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"swingT2": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingT2",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"swingT3": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingT3",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"swingTF": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../back/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"3": {
+			"name": "3",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingTF",
+		"_keys": [
+			"0",
+			"1",
+			"2",
+			"3"
+		]
+	},
+	"swingP1": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingP1",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"swingP2": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingP2",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"swingPF": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"3": {
+			"name": "3",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "swingPF",
+		"_keys": [
+			"0",
+			"1",
+			"2",
+			"3"
+		]
+	},
+	"stabO1": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "stabO1",
+		"_keys": [
+			"0",
+			"1"
+		]
+	},
+	"stabO2": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "stabO2",
+		"_keys": [
+			"0",
+			"1"
+		]
+	},
+	"stabOF": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "stabOF",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"stabT1": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "stabT1",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"stabT2": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "stabT2",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"stabTF": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"3": {
+			"name": "3",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "stabTF",
+		"_keys": [
+			"0",
+			"1",
+			"2",
+			"3"
+		]
+	},
+	"shoot1": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "shoot1",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"shoot2": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"3": {
+			"name": "3",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"4": {
+			"name": "4",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "shoot2",
+		"_keys": [
+			"0",
+			"1",
+			"2",
+			"3",
+			"4"
+		]
+	},
+	"shootF": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "shootF",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"proneStab": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../prone/0/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "proneStab",
+		"_keys": [
+			"0",
+			"1"
+		]
+	},
+	"prone": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "prone",
+		"_keys": [
+			"0"
+		]
+	},
+	"heal": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"2": {
+			"name": "2",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "heal",
+		"_keys": [
+			"0",
+			"1",
+			"2"
+		]
+	},
+	"fly": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "fly",
+		"_keys": [
+			"0",
+			"1"
+		]
+	},
+	"jump": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "jump",
+		"_keys": [
+			"0"
+		]
+	},
+	"sit": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../front/head",
+				"type": "uol"
+			}
+		},
+		"name": "sit",
+		"_keys": [
+			"0"
+		]
+	},
+	"ladder": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../back/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../back/head",
+				"type": "uol"
+			}
+		},
+		"name": "ladder",
+		"_keys": [
+			"0",
+			"1"
+		]
+	},
+	"rope": {
+		"0": {
+			"name": "0",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../back/head",
+				"type": "uol"
+			}
+		},
+		"1": {
+			"name": "1",
+			"_keys": [
+				"head"
+			],
+			"head": {
+				"name": "head",
+				"path": "../../back/head",
+				"type": "uol"
+			}
+		},
+		"name": "rope",
+		"_keys": [
+			"0",
+			"1"
+		]
+	}
+}

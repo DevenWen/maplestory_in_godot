@@ -1,31 +1,17 @@
-extends Sprite2D
+extends CharacterSprite
 
-class_name Head
+class_name HeadSprite
+@export var is_back : bool = false # 是否是背面
 
-@onready var WZLib = get_node("/root/MapleResources") as MapleResource
+var capvslot : String # 帽子的类型
 
-func draw_recursion(draw_map):
-	print("body call arm", draw_map)
-	var charactor = self.find_parent("Player") as Charactor
-	var wznode = WZLib.get_by_path(
-		"Charactor/%s.img/%s/%d/head" % [charactor.head_skin, charactor.motion, charactor.frame])
+func draw(draw_map):
+	draw_map = super.draw(draw_map);
+	var wznode = WZLib.get_by_path("Character/%s/%s/%d/head" % [self.img, charactor.motion, charactor.frame])
+	if typeof(wznode) == TYPE_DICTIONARY:
+		if wznode.data.z == "backHead":
+			self.is_back = true
+		# 先渲染头发和帽子
+	draw_map = $Hair.draw(draw_map)
 	
-	# 绘制
-	var data = wznode.data
-	var origin = Vector2(-data.origin.X, -data.origin.Y)
-	self.texture = data._image.texture
-	
-	# 计算映射, head 总是需要 match navel
-	var neck = Vector2(-data.map.neck.X, -data.map.neck.Y)
-	origin = origin + neck - draw_map["body/neck"]
-	self.position = origin
-	self.position.y += 32
-	self.offset += (self.texture.get_size() / 2)
-	
-	
-	# 保存新的映射数据
-	for key in data["map"]["_keys"]:
-		var m = data["map"][key]
-		draw_map["head/" + key] = Vector2(-m.X, -m.Y)
-	
-	return draw_map
+	return $Face.draw(draw_map)

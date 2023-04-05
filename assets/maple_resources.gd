@@ -30,6 +30,9 @@ func get_by_path(path: String):
 	# path example: Character/00002000.img/motion/index
 	# 判断缓存是否有，有则直接索引返回；
 	# 缓存上没有，则加载文件，并初始化；
+	if not path.contains(".img"):
+		return NO_FOUND
+	
 	var ss = path.split(".img")
 	var file_path = ss[0]
 	var sub_path = ss[1]
@@ -45,7 +48,7 @@ func get_by_path(path: String):
 			return get_by_path(path)
 		else:
 			printerr("get wz path fail: ", path)
-			return {}
+			return NO_FOUND
 	
 func load_wz_file(file_path):
 	var path = "res://assets/"+ file_path + ".img.xml.json"
@@ -98,8 +101,6 @@ static func create_sprite(draw_map, data):
 		var sprite = Sprite2D.new()
 		sprite.texture = data._image.texture
 		var origin = off_set(draw_map, data)
-		# print_debug("draw: ", data.name, origin)
-		# print_debug("after offset: ", draw_map)
 		sprite.position = origin
 		sprite.offset += (sprite.texture.get_size() / 2)
 		return sprite
@@ -138,6 +139,7 @@ static func off_set(draw_map, data):
 		var navel = Vector2(-map.navel.X, -map.navel.Y)
 		result = origin - get_or(draw_map, "body/navel") + navel
 	
+	draw_map["%s/origin"%[name]] = result 
 	return result
 			
 static func get_or(map, key):
