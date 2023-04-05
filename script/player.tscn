@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cipfo8j1dgaox"]
+[gd_scene load_steps=6 format=3 uid="uid://cipfo8j1dgaox"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_mw56t"]
 [ext_resource type="Script" path="res://script/Body.gd" id="2_n6vlk"]
 [ext_resource type="Script" path="res://script/Face.gd" id="3_3lehe"]
+[ext_resource type="Script" path="res://script/Hair.gd" id="4_wylno"]
+[ext_resource type="Script" path="res://script/Cap.gd" id="5_43jph"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_mw56t")
-frame = 1
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
@@ -26,3 +27,58 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("3_3lehe")
 motion = "hit"
+img = "Face/00020000.img"
+
+[node name="Hair" type="Container" parent="Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_wylno")
+img = "Hair/00030054.img"
+
+[node name="Coat" type="Container" parent="Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_n6vlk")
+img = "Coat/01040078.img"
+
+[node name="Pants" type="Container" parent="Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_n6vlk")
+img = "Pants/01062041.img"
+
+[node name="Shoes" type="Container" parent="Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_n6vlk")
+img = "Shoes/01072324.img"
+
+[node name="Cap" type="Container" parent="Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_43jph")
+img = "Cap/01001023.img"
+
+[node name="Glove" type="Container" parent="Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_n6vlk")
+img = "Glove/01082041.img"
+
+[node name="Weapon" type="Container" parent="Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_n6vlk")
+img = "Weapon/01382066.img"
+
+[node name="Shield" type="Container" parent="Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_n6vlk")
+img = "Shield/01092044.img"
+
+[node name="Cape" type="Container" parent="Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_n6vlk")
+img = "Cape/01102081.img"

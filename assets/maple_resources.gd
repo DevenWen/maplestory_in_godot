@@ -1,15 +1,30 @@
 extends Node
 class_name MapleResource
 
-enum {LOAD_OK, LOAD_FAIL}
+enum {LOAD_OK, LOAD_FAIL, NO_FOUND}
+
 
 # Member variable
 var WZ = WZNode.new(null, "", {})
+var z_map = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# test code
 	print("ready for MapleResources.")
+	load_z_map()
+
+func load_z_map():
+	load_wz_file("zmap")
+	
+	var array = WZ.children.zmap.data._keys
+	var total = z_map.size()
+	var index = 0
+	for key in array:
+		z_map[key] = total - index
+		index += 1
+	
+	print("load zmap sort success")
 	
 func get_by_path(path: String):
 	# path example: Character/00002000.img/motion/index
@@ -24,7 +39,7 @@ func get_by_path(path: String):
 		if result != null:
 			return result.resolve_uol()
 		else:
-			return {}
+			return NO_FOUND
 	else:
 		if (load_wz_file(file_path) == LOAD_OK):
 			return get_by_path(path)
@@ -43,6 +58,13 @@ func load_wz_file(file_path):
 	WZ.children[file_path] = create_wz_node(WZ, data)
 	print("Load wz file success ", path)
 	return OK
+
+func get_sprite_z_index(part):
+	if z_map.has(part):
+		return z_map[part]
+	else:
+		printerr("warn: no part in z map: ", part)
+		return 0
 	
 static func find_for_sub_path(data: WZNode, sub_path: String):
 	# TODO
@@ -68,7 +90,7 @@ static func create_wz_node(parent, data):
 	return result
 
 static func is_canvas(data):
-	return typeof(data) == TYPE_DICTIONARY and data.type == "canvas"
+	return typeof(data) == TYPE_DICTIONARY and data.has("type") and data.type == "canvas"
 
 static func create_sprite(draw_map, data):
 	if (is_canvas(data)):
@@ -76,8 +98,8 @@ static func create_sprite(draw_map, data):
 		var sprite = Sprite2D.new()
 		sprite.texture = data._image.texture
 		var origin = off_set(draw_map, data)
-		print_debug("draw: ", data.name, origin)
-		print_debug("after offset: ", draw_map)
+		# print_debug("draw: ", data.name, origin)
+		# print_debug("after offset: ", draw_map)
 		sprite.position = origin
 		sprite.offset += (sprite.texture.get_size() / 2)
 		return sprite
