@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cipfo8j1dgaox"]
+[gd_scene load_steps=11 format=3 uid="uid://cipfo8j1dgaox"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_mw56t"]
 [ext_resource type="Script" path="res://script/Body.gd" id="2_n6vlk"]
@@ -6,12 +6,32 @@
 [ext_resource type="Script" path="res://script/Head.gd" id="3_875og"]
 [ext_resource type="Script" path="res://script/Hair.gd" id="4_wylno"]
 [ext_resource type="Script" path="res://script/Cap.gd" id="5_43jph"]
+[ext_resource type="Script" path="res://script/FaceAnimation.gd" id="7_78ywb"]
 [ext_resource type="Script" path="res://script/Player/CharactorAnimation.gd" id="8_j13mk"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwiv0"]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_k5jf8"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"rope",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk1",
+"speed": 30.0
+}]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_mw56t")
+motion = "assassination"
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
@@ -39,8 +59,14 @@ img = "Cap/01001023.img"
 [node name="Face" type="Container" parent="Marker2D/Head"]
 layout_mode = 2
 script = ExtResource("3_3lehe")
-motion = "hit"
 img = "Face/00020000.img"
+
+[node name="BlinkTimer" type="Timer" parent="Marker2D/Head/Face"]
+autostart = true
+
+[node name="FaceAnimation" type="AnimatedSprite2D" parent="Marker2D/Head/Face"]
+sprite_frames = SubResource("SpriteFrames_fwiv0")
+script = ExtResource("7_78ywb")
 
 [node name="Coat" type="Container" parent="Marker2D"]
 offset_right = 40.0
@@ -86,6 +112,10 @@ img = "Cape/01102081.img"
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k5jf8")
+animation = &"jump"
 script = ExtResource("8_j13mk")
 
+[connection signal="timeout" from="Marker2D/Head/Face/BlinkTimer" to="Marker2D/Head/Face" method="_on_timer_timeout"]
+[connection signal="animation_looped" from="Marker2D/Head/Face/FaceAnimation" to="Marker2D/Head/Face" method="_on_face_animation_animation_looped"]
+[connection signal="frame_changed" from="Marker2D/Head/Face/FaceAnimation" to="Marker2D/Head/Face" method="_on_face_animation_frame_changed"]
 [connection signal="frame_changed" from="Animation" to="." method="_on_charactor_animation_frame_changed"]

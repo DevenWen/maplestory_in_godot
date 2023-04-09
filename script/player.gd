@@ -7,7 +7,7 @@ class_name Charactor
 @export var body_skin = "00002000"
 @export var flip = true
 
-@export var motion = "stand1" as String
+@export var motion = "jump" as String
 # 动作帧
 @export var frame = 0 as int
 
@@ -48,4 +48,3 @@ func _on_charactor_animation_frame_changed():
 	self.motion = motion_frame.split("#")[0]
 	self.frame = int(motion_frame.split("#")[1])
 	draw()
-	print("frame change!", anim_name, frame)
