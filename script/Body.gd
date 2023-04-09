@@ -21,7 +21,7 @@ func free_sprite_by_part(part):
 		part_to_sprite.erase(part)
 
 func draw(draw_map):
-	
+	reset()
 	# 读取 body 的数据；
 	# 渲染 body 数据中的 贴图集 
 	# 计算 body 的偏移
@@ -30,7 +30,6 @@ func draw(draw_map):
 	# 绘制
 	# var data = wznode.data
 	# 循环贴图集合
-	reset()
 	if typeof(wznode) == TYPE_INT and wznode == MapleResource.NO_FOUND:
 		return draw_map
 		

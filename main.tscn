@@ -1,12 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce6lpywnohgj"]
+[gd_scene load_steps=3 format=3 uid="uid://ce6lpywnohgj"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_10lsm"]
 [ext_resource type="PackedScene" uid="uid://cipfo8j1dgaox" path="res://script/player.tscn" id="1_ysgrg"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_10lsm")
 
 [node name="Player" parent="." instance=ExtResource("1_ysgrg")]
 position = Vector2(167, 138)
 scale = Vector2(1, 0.967)
+speed = 2.0
 motion = "smokeshell"
 
 [node name="Control" type="Control" parent="."]
@@ -24,11 +27,16 @@ offset_bottom = 270.0
 
 [node name="Button" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "walk1"
+text = "walk1x1.5"
 
 [node name="Button2" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "walk2"
+text = "walk1x0.8"
 
-[connection signal="button_up" from="Control/VBoxContainer/Button" to="Player" method="_on_button_button_up"]
-[connection signal="button_up" from="Control/VBoxContainer/Button2" to="Player" method="_on_button_button_up"]
+[node name="Button3" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "jump"
+
+[connection signal="button_up" from="Control/VBoxContainer/Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="Control/VBoxContainer/Button2" to="." method="_on_button_2_button_up"]
+[connection signal="button_up" from="Control/VBoxContainer/Button3" to="." method="_on_button_3_button_up"]

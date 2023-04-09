@@ -45,6 +45,7 @@ func do_draw(draw_map, node):
 	if (MapleResource.is_canvas(value)):
 		# 绘制
 		var sprite = WZLib.create_sprite(draw_map, value) as Sprite2D
+		sprite.z_index = WZLib.get_sprite_z_index(value.z)
 		part_to_sprite[value.z] = sprite
 		self.add_child(sprite)
 
