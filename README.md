@@ -16,14 +16,14 @@ godot is powerful game engine. It's nice to create 2D platform game, such as Map
 		- [ ]  可以编写一个 properties ，记录资源库的 path，并且标记它的 Type 为 Object
 		- [ ]  通过 Tileset 将对象先贴到编辑界面中。（最好可以做到对象的隐含数据就是 path）
 - [ ]  编写 MapleStory 动画库
-	- [ ]  人物动画库
-		- [ ]  json 数据转动画调研。需要调研清楚 Godot 的动画模块，能不能通过数据定义动画。
-		- [ ]  人物拼接算法移植
-			- [ ]  Godot 的节点粘贴调研
-			- [ ]  body、head、arm
-			- [ ]  face、hair
-			- [ ]  items
-		- [ ]  人物动作播放
+	- [x]  人物动画库
+		- [x]  json 数据转动画调研。需要调研清楚 Godot 的动画模块，能不能通过数据定义动画。
+		- [x]  人物拼接算法移植
+			- [x]  Godot 的节点粘贴调研
+			- [x]  body、head、arm
+			- [x]  face、hair
+			- [x]  items
+		- [x]  人物动作播放
 	- [ ]  怪物动画库
 	- [ ]  场景动画库
 		- [ ]  背景（可复用）
