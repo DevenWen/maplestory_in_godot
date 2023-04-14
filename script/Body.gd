@@ -9,10 +9,11 @@ class_name CharacterSprite
 var part_to_sprite = {}
 
 func reset():
-	for part in part_to_sprite:
-		var child = part_to_sprite[part] as Sprite2D
-		child.queue_free()
-	part_to_sprite = {}
+	for child in self.get_children():
+		# 判断其 sticker 进行清理
+		if child.is_class("Sprite2D"):
+			child.queue_free()
+	part_to_sprite.clear()
 
 func free_sprite_by_part(part):
 	if part_to_sprite.has(part):
