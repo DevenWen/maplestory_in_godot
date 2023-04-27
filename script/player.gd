@@ -56,6 +56,7 @@ func play(motion: String, speed: float = -1.0):
 		$Animation.play(motion, self.speed)
 	else:
 		$Animation.play(motion, speed)
+
 	
 func clear():
 	# TODO 递归抹除所有的绘画

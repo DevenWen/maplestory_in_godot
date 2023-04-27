@@ -1,16 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://ce6lpywnohgj"]
+[gd_scene load_steps=6 format=3 uid="uid://ce6lpywnohgj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_10lsm"]
 [ext_resource type="PackedScene" uid="uid://cipfo8j1dgaox" path="res://script/player.tscn" id="1_ysgrg"]
+[ext_resource type="Script" path="res://script/Player/PlayerController.gd" id="2_v5e0t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prvm5"]
+size = Vector2(628, 87.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ojxdq"]
+radius = 18.0
+height = 60.0
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_10lsm")
-
-[node name="Player" parent="." instance=ExtResource("1_ysgrg")]
-position = Vector2(167, 138)
-scale = Vector2(1, 0.967)
-speed = 2.0
-motion = "smokeshell"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -36,6 +38,29 @@ text = "walk1x0.8"
 [node name="Button3" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 text = "jump"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(316, 275)
+shape = SubResource("RectangleShape2D_prvm5")
+one_way_collision_margin = 7.4
+debug_color = Color(0, 0.329412, 0.396078, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_v5e0t")
+
+[node name="Player" parent="CharacterBody2D" instance=ExtResource("1_ysgrg")]
+position = Vector2(167, 138)
+scale = Vector2(1, 0.967)
+speed = 2.0
+motion = "smokeshell"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(167, 109)
+shape = SubResource("CapsuleShape2D_ojxdq")
+debug_color = Color(0.678431, 0, 0.458824, 0.231373)
 
 [connection signal="button_up" from="Control/VBoxContainer/Button" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="Control/VBoxContainer/Button2" to="." method="_on_button_2_button_up"]
