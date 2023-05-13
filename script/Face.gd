@@ -55,7 +55,6 @@ func _on_timer_timeout():
 	$BlinkTimer.start(randf_range(4,6))
 
 func _on_face_animation_frame_changed():
-	print("face animation frame changed")
 	var anim = $FaceAnimation
 	var frame = anim.frame
 	var anim_name = anim.animation

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cipfo8j1dgaox"]
+[gd_scene load_steps=16 format=3 uid="uid://cipfo8j1dgaox"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_mw56t"]
 [ext_resource type="Script" path="res://script/Body.gd" id="2_n6vlk"]
@@ -8,6 +8,14 @@
 [ext_resource type="Script" path="res://script/Cap.gd" id="5_43jph"]
 [ext_resource type="Script" path="res://script/FaceAnimation.gd" id="7_78ywb"]
 [ext_resource type="Script" path="res://script/Player/CharactorAnimation.gd" id="8_j13mk"]
+[ext_resource type="Script" path="res://script/Player/States/StateMachine.gd" id="9_bitva"]
+[ext_resource type="Script" path="res://script/Player/States/Idle.gd" id="10_f043d"]
+[ext_resource type="Script" path="res://script/Player/States/Walk.gd" id="11_itdh1"]
+[ext_resource type="Script" path="res://script/Player/States/Jump.gd" id="12_3ali6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5om3g"]
+radius = 18.0
+height = 60.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fwiv0"]
 
@@ -29,9 +37,14 @@ animations = [{
 "speed": 30.0
 }]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_mw56t")
 motion = "assassination"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -30)
+shape = SubResource("CapsuleShape2D_5om3g")
+debug_color = Color(0.678431, 0, 0.458824, 0.231373)
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
@@ -115,7 +128,21 @@ sprite_frames = SubResource("SpriteFrames_k5jf8")
 animation = &"jump"
 script = ExtResource("8_j13mk")
 
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("9_bitva")
+inital_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("10_f043d")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("11_itdh1")
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("12_3ali6")
+
 [connection signal="timeout" from="Marker2D/Head/Face/BlinkTimer" to="Marker2D/Head/Face" method="_on_timer_timeout"]
 [connection signal="animation_looped" from="Marker2D/Head/Face/FaceAnimation" to="Marker2D/Head/Face" method="_on_face_animation_animation_looped"]
 [connection signal="frame_changed" from="Marker2D/Head/Face/FaceAnimation" to="Marker2D/Head/Face" method="_on_face_animation_frame_changed"]
+[connection signal="animation_changed" from="Animation" to="." method="_on_animation_animation_changed"]
 [connection signal="frame_changed" from="Animation" to="." method="_on_charactor_animation_frame_changed"]

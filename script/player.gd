@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 class_name Charactor
 
@@ -9,6 +9,11 @@ class_name Charactor
 @export var motion = "jump" as String
 # 动作帧
 var frame = 0 as int
+
+# 物理参数
+@export var move_speed: float = 100.0
+@export var jump_velocity: float = 400
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # 12 个绘制部分
 var draw_part = [
@@ -32,6 +37,9 @@ func draw():
 	for part in draw_part:
 		var node = find_child(part)
 		draw_map = node.draw(draw_map)
+
+func _on_animation_animation_changed():
+	_on_charactor_animation_frame_changed()
 
 func _on_charactor_animation_frame_changed():
 	var anim = $Animation
@@ -61,3 +69,5 @@ func play(motion: String, speed: float = -1.0):
 func clear():
 	# TODO 递归抹除所有的绘画
 	pass
+
+

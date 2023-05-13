@@ -23,7 +23,7 @@ func create_animation(animation_name, wznode):
 	for _frame in wznode.data._keys:
 		var node = wznode.children[_frame].data as Dictionary
 		var texture = Texture2D.new()
-		var _delay = node.get("delay", 1000)
+		var _delay = node.get("delay", 0)
 		var action = node.get("action", animation_name)
 		var action_frame = node.get("frame", _frame)
 		texture.resource_name = "%s#%s"%[action, action_frame]
