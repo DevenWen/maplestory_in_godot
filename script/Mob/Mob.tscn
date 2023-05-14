@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://script/Mob/States/Idle.gd" id="4_57shp"]
 [ext_resource type="Script" path="res://script/Mob/States/Move.gd" id="6_4l3eb"]
 [ext_resource type="Script" path="res://script/Mob/States/Jump.gd" id="7_alu3w"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="8_lf4u3"]
+[ext_resource type="PackedScene" uid="uid://cqn73vgtpfyfc" path="res://script/Mob/AI/mob_ai.tscn" id="8_r0lpq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5khn0"]
 
@@ -45,8 +45,8 @@ script = ExtResource("7_alu3w")
 position = Vector2(0, -24)
 shape = SubResource("CircleShape2D_sbs8i")
 
-[node name="AI" type="Node" parent="."]
-script = ExtResource("8_lf4u3")
+[node name="MobAI" parent="." instance=ExtResource("8_r0lpq")]
+actor_node_path = NodePath("../StateMachine")
 
 [connection signal="animation_changed" from="Animation" to="Animation/Marker2D/Sprites" method="_on_animation_animation_changed"]
 [connection signal="frame_changed" from="Animation" to="Animation/Marker2D/Sprites" method="_on_animation_frame_changed"]

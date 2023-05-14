@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqn73vgtpfyfc"]
+
+[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_mdd3v"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector_random.gd" id="2_t0f80"]
+[ext_resource type="Script" path="res://script/Mob/AI/actions/MoveAction.gd" id="3_ivy0w"]
+[ext_resource type="Script" path="res://script/Mob/AI/actions/JumpAction.gd" id="4_s4ww5"]
+
+[node name="MobAI" type="Node"]
+script = ExtResource("1_mdd3v")
+
+[node name="SelectorRandomComposite" type="Node" parent="."]
+script = ExtResource("2_t0f80")
+
+[node name="MoveAction" type="Node" parent="SelectorRandomComposite"]
+script = ExtResource("3_ivy0w")
+
+[node name="JumpAction" type="Node" parent="SelectorRandomComposite"]
+script = ExtResource("4_s4ww5")

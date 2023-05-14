@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ce6lpywnohgj"]
+[gd_scene load_steps=6 format=3 uid="uid://ce6lpywnohgj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_10lsm"]
 [ext_resource type="PackedScene" uid="uid://crxbxwqcthq5y" path="res://script/player.tscn" id="1_ysgrg"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prvm5"]
 size = Vector2(628, 87.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5gv5"]
+size = Vector2(49, 149)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_10lsm")
@@ -44,6 +47,16 @@ shape = SubResource("RectangleShape2D_prvm5")
 one_way_collision_margin = 7.4
 debug_color = Color(0, 0.329412, 0.396078, 1)
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 170)
+shape = SubResource("RectangleShape2D_a5gv5")
+one_way_collision_margin = 12.2
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(636, 174)
+shape = SubResource("RectangleShape2D_a5gv5")
+one_way_collision_margin = 12.2
+
 [node name="Player" parent="." instance=ExtResource("1_ysgrg")]
 position = Vector2(167, 138)
 scale = Vector2(1, 0.967)
@@ -51,6 +64,8 @@ motion = "jump"
 
 [node name="Mob" parent="." instance=ExtResource("3_s1gqw")]
 position = Vector2(252, 119)
+
+[node name="Camera2D" type="Camera2D" parent="Mob"]
 
 [connection signal="button_up" from="Control/VBoxContainer/Button" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="Control/VBoxContainer/Button2" to="." method="_on_button_2_button_up"]
