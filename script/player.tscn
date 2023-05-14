@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cipfo8j1dgaox"]
+[gd_scene load_steps=16 format=3 uid="uid://crxbxwqcthq5y"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_mw56t"]
 [ext_resource type="Script" path="res://script/Body.gd" id="2_n6vlk"]
@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://script/Cap.gd" id="5_43jph"]
 [ext_resource type="Script" path="res://script/FaceAnimation.gd" id="7_78ywb"]
 [ext_resource type="Script" path="res://script/Player/CharactorAnimation.gd" id="8_j13mk"]
-[ext_resource type="Script" path="res://script/Player/States/StateMachine.gd" id="9_bitva"]
+[ext_resource type="Script" path="res://script/StateMachine/StateMachine.gd" id="9_u8tdm"]
 [ext_resource type="Script" path="res://script/Player/States/Idle.gd" id="10_f043d"]
 [ext_resource type="Script" path="res://script/Player/States/Walk.gd" id="11_itdh1"]
 [ext_resource type="Script" path="res://script/Player/States/Jump.gd" id="12_3ali6"]
@@ -129,7 +129,7 @@ animation = &"jump"
 script = ExtResource("8_j13mk")
 
 [node name="StateMachine" type="Node" parent="."]
-script = ExtResource("9_bitva")
+script = ExtResource("9_u8tdm")
 inital_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine"]

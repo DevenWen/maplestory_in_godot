@@ -1,0 +1,52 @@
+[gd_scene load_steps=11 format=3 uid="uid://m1f8kfrqrljn"]
+
+[ext_resource type="Script" path="res://script/Mob/Mob.gd" id="1_hfdm1"]
+[ext_resource type="Script" path="res://script/Mob/Sprites.gd" id="2_5ifgt"]
+[ext_resource type="Script" path="res://script/Mob/Animation.gd" id="2_5jb40"]
+[ext_resource type="Script" path="res://script/StateMachine/StateMachine.gd" id="4_30qfg"]
+[ext_resource type="Script" path="res://script/Mob/States/Idle.gd" id="4_57shp"]
+[ext_resource type="Script" path="res://script/Mob/States/Move.gd" id="6_4l3eb"]
+[ext_resource type="Script" path="res://script/Mob/States/Jump.gd" id="7_alu3w"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="8_lf4u3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5khn0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sbs8i"]
+radius = 24.0832
+
+[node name="Mob" type="CharacterBody2D"]
+script = ExtResource("1_hfdm1")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5khn0")
+script = ExtResource("2_5jb40")
+
+[node name="Marker2D" type="Marker2D" parent="Animation"]
+
+[node name="Sprites" type="Container" parent="Animation/Marker2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_5ifgt")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("4_30qfg")
+inital_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("4_57shp")
+
+[node name="Move" type="Node" parent="StateMachine"]
+script = ExtResource("6_4l3eb")
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("7_alu3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24)
+shape = SubResource("CircleShape2D_sbs8i")
+
+[node name="AI" type="Node" parent="."]
+script = ExtResource("8_lf4u3")
+
+[connection signal="animation_changed" from="Animation" to="Animation/Marker2D/Sprites" method="_on_animation_animation_changed"]
+[connection signal="frame_changed" from="Animation" to="Animation/Marker2D/Sprites" method="_on_animation_frame_changed"]

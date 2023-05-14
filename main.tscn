@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ce6lpywnohgj"]
+[gd_scene load_steps=5 format=3 uid="uid://ce6lpywnohgj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_10lsm"]
-[ext_resource type="PackedScene" uid="uid://cipfo8j1dgaox" path="res://script/player.tscn" id="1_ysgrg"]
+[ext_resource type="PackedScene" uid="uid://crxbxwqcthq5y" path="res://script/player.tscn" id="1_ysgrg"]
+[ext_resource type="PackedScene" uid="uid://m1f8kfrqrljn" path="res://script/Mob/Mob.tscn" id="3_s1gqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prvm5"]
 size = Vector2(628, 87.5)
@@ -47,6 +48,9 @@ debug_color = Color(0, 0.329412, 0.396078, 1)
 position = Vector2(167, 138)
 scale = Vector2(1, 0.967)
 motion = "jump"
+
+[node name="Mob" parent="." instance=ExtResource("3_s1gqw")]
+position = Vector2(252, 119)
 
 [connection signal="button_up" from="Control/VBoxContainer/Button" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="Control/VBoxContainer/Button2" to="." method="_on_button_2_button_up"]

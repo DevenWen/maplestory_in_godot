@@ -77,7 +77,6 @@ static func find_for_sub_path(data: WZNode, sub_path: String):
 	return data.find(path)
 
 static func create_wz_node(parent, data):
-	# if data["type"] != 'object'
 	if typeof(data) != TYPE_DICTIONARY:
 		return null;
 		
@@ -88,7 +87,8 @@ static func create_wz_node(parent, data):
 	
 	var result = WZNode.new(parent, name, data)	
 	for sub_name in data.get("_keys", {}):
-		result.children[sub_name] = create_wz_node(result, data[sub_name])
+		# FIXME data.get sub_name 偶尔为 null, 原因未明
+		result.children[sub_name] = create_wz_node(result, data.get(sub_name, null))
 		
 	return result
 
@@ -112,6 +112,9 @@ static func create_sprite(draw_map, data):
 static func off_set(draw_map, data):
 	var origin = Vector2(-data.origin.X, -data.origin.Y)
 	var name = data.name
+	if not data.has("map"):
+		return origin
+	
 	var map = data.map as Dictionary
 	var result
 	
