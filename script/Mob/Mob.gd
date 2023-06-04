@@ -8,6 +8,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var img = "1210100"
 @export var move_speed: float = 100.0
 @export var jump_velocity: float = 400
+@onready var state_machine = $StateMachine
 
 # API
 func set_flip(flip: bool):
@@ -18,6 +19,5 @@ func set_flip(flip: bool):
 
 func play(animation):
 	# TODO 实现 animation player
+	animation = "%s@%s"%[img, animation]
 	$Animation.play(animation)
-
-

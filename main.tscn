@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://ce6lpywnohgj"]
+[gd_scene load_steps=10 format=3 uid="uid://ce6lpywnohgj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_10lsm"]
 [ext_resource type="PackedScene" uid="uid://crxbxwqcthq5y" path="res://script/player.tscn" id="1_ysgrg"]
 [ext_resource type="PackedScene" uid="uid://m1f8kfrqrljn" path="res://script/Mob/Mob.tscn" id="3_s1gqw"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="4_x8npd"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector_random.gd" id="5_qb8gi"]
+[ext_resource type="Script" path="res://script/Mob/AI/actions/MoveAction.gd" id="6_epuy8"]
+[ext_resource type="Script" path="res://script/Mob/AI/actions/JumpAction.gd" id="7_652fc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prvm5"]
 size = Vector2(628, 87.5)
@@ -13,6 +17,65 @@ size = Vector2(49, 149)
 [node name="Main" type="Node2D"]
 script = ExtResource("1_10lsm")
 
+[node name="Mods" type="Node" parent="."]
+
+[node name="Pig" parent="Mods" instance=ExtResource("3_s1gqw")]
+position = Vector2(252, 119)
+
+[node name="BeehaveTree" type="Node" parent="Mods/Pig"]
+script = ExtResource("4_x8npd")
+
+[node name="SelectorRandomComposite" type="Node" parent="Mods/Pig/BeehaveTree"]
+script = ExtResource("5_qb8gi")
+
+[node name="MoveActionLeaf" type="Node" parent="Mods/Pig/BeehaveTree/SelectorRandomComposite"]
+script = ExtResource("6_epuy8")
+
+[node name="JumpActionLeaf" type="Node" parent="Mods/Pig/BeehaveTree/SelectorRandomComposite"]
+script = ExtResource("7_652fc")
+
+[node name="Green" parent="Mods" instance=ExtResource("3_s1gqw")]
+position = Vector2(110, 196)
+img = "0100100"
+
+[node name="BeehaveTree" type="Node" parent="Mods/Green"]
+script = ExtResource("4_x8npd")
+
+[node name="SelectorRandomComposite" type="Node" parent="Mods/Green/BeehaveTree"]
+script = ExtResource("5_qb8gi")
+
+[node name="MoveActionLeaf" type="Node" parent="Mods/Green/BeehaveTree/SelectorRandomComposite"]
+script = ExtResource("6_epuy8")
+
+[node name="Green_Water" parent="Mods" instance=ExtResource("3_s1gqw")]
+position = Vector2(323, 185)
+img = "0210100"
+
+[node name="BeehaveTree" type="Node" parent="Mods/Green_Water"]
+script = ExtResource("4_x8npd")
+
+[node name="SelectorRandomComposite" type="Node" parent="Mods/Green_Water/BeehaveTree"]
+script = ExtResource("5_qb8gi")
+
+[node name="MoveActionLeaf" type="Node" parent="Mods/Green_Water/BeehaveTree/SelectorRandomComposite"]
+script = ExtResource("6_epuy8")
+
+[node name="JumpActionLeaf" type="Node" parent="Mods/Green_Water/BeehaveTree/SelectorRandomComposite"]
+script = ExtResource("7_652fc")
+
+[node name="Green_mogu" parent="Mods" instance=ExtResource("3_s1gqw")]
+position = Vector2(468, 187)
+img = "1110100"
+
+[node name="BeehaveTree" type="Node" parent="Mods/Green_mogu"]
+script = ExtResource("4_x8npd")
+
+[node name="SelectorRandomComposite" type="Node" parent="Mods/Green_mogu/BeehaveTree"]
+script = ExtResource("5_qb8gi")
+
+[node name="MoveActionLeaf" type="Node" parent="Mods/Green_mogu/BeehaveTree/SelectorRandomComposite"]
+script = ExtResource("6_epuy8")
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -20,6 +83,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 310.0
 offset_top = 48.0
@@ -39,6 +103,8 @@ layout_mode = 2
 text = "jump"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+light_mask = 31
+visibility_layer = 31
 disable_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -62,10 +128,9 @@ position = Vector2(167, 138)
 scale = Vector2(1, 0.967)
 motion = "jump"
 
-[node name="Mob" parent="." instance=ExtResource("3_s1gqw")]
-position = Vector2(252, 119)
-
-[node name="Camera2D" type="Camera2D" parent="Mob"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(85, -19.6484)
+scale = Vector2(1, 1.03413)
 
 [connection signal="button_up" from="Control/VBoxContainer/Button" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="Control/VBoxContainer/Button2" to="." method="_on_button_2_button_up"]

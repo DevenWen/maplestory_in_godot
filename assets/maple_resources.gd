@@ -7,6 +7,7 @@ enum {LOAD_OK, LOAD_FAIL, NO_FOUND}
 # Member variable
 var WZ = WZNode.new(null, "", {})
 var z_map = {}
+var loaded_mod = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -68,7 +69,13 @@ func get_sprite_z_index(part):
 	else:
 		printerr("warn: no part in z map: ", part)
 		return 0
-	
+
+func is_load_mod_already(img):
+	return loaded_mod.has(img)
+
+func add_load_mod_already(img):
+	loaded_mod.append(img)
+
 static func find_for_sub_path(data: WZNode, sub_path: String):
 	# TODO
 	# 拆解 sub_path

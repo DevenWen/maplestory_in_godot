@@ -12,11 +12,9 @@ func _ready():
 	animation = find_parent("Animation")
 
 func _on_animation_frame_changed():
-	_on_animation_animation_changed()
+	_on_animation_animation_changed() 
 
 func _on_animation_animation_changed():
-	# TODO 绘制贴图
-	# pass # Replace with function body.
 	reset()
 	draw()
 
@@ -24,7 +22,7 @@ func draw():
 	var anim = animation
 	var img = anim.img
 	var frame = anim.frame
-	var anim_name = anim.animation
+	var anim_name = anim.animation.split("@")[1] # 
 	
 	var wznode = WZLib.get_by_path("Mob/%s.img/%s/%d"%[anim.img, anim_name, frame])
 	
@@ -38,6 +36,4 @@ func draw():
 		
 	
 	
-
-
 

@@ -38,6 +38,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_mw56t")
 motion = "assassination"
 

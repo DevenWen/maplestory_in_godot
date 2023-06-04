@@ -1,0 +1,16 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+uid="uid://qes8vincgr5c"
+path="res://.godot/imported/demo.tpsheet-d1d356d9012269fbf4500e29234c280a.res"
+
+[deps]
+
+files=["res://assets/Map/Back/grassySoil/demo.sprites/-back-7.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-2.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-6.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-4.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-5.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-1.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-3.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-6.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-9.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-0.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-8.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-1.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-7.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-2.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-5.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-3.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-0.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-4.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-8.tres"]
+
+source_file="res://assets/Map/Back/grassySoil/demo.tpsheet"
+dest_files=["res://.godot/imported/demo.tpsheet-d1d356d9012269fbf4500e29234c280a.res", "res://assets/Map/Back/grassySoil/demo.sprites/-back-7.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-2.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-6.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-4.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-5.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-1.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-3.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-6.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-9.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-0.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-8.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-1.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-7.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-2.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-5.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-3.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-0.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-4.tres", "res://assets/Map/Back/grassySoil/demo.sprites/-back-8.tres"]
+
+[params]
+

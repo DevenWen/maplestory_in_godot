@@ -1,0 +1,55 @@
+[gd_scene load_steps=12 format=3 uid="uid://bqb2b6hmgo3ak"]
+
+[ext_resource type="Texture2D" uid="uid://cv7i3v8cfqeys" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-0.tres" id="1_x3w12"]
+[ext_resource type="Texture2D" uid="uid://4pto8pe387qt" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-1.tres" id="2_134fq"]
+[ext_resource type="Texture2D" uid="uid://vcgybqy1b2oq" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-2.tres" id="3_3h7hh"]
+[ext_resource type="Texture2D" uid="uid://b86u05l51c5po" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-3.tres" id="4_6iqg7"]
+[ext_resource type="Texture2D" uid="uid://c7m721kleg28g" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-4.tres" id="5_i626i"]
+[ext_resource type="Texture2D" uid="uid://cettv1e8ecgf4" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-5.tres" id="6_arlcr"]
+[ext_resource type="Texture2D" uid="uid://4kuecmvsnubj" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-6.tres" id="7_q0sr7"]
+[ext_resource type="Texture2D" uid="uid://in6wla40jsfd" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-7.tres" id="8_ouv5j"]
+[ext_resource type="Texture2D" uid="uid://u1w2kuk2y87b" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-8.tres" id="9_ttlty"]
+[ext_resource type="Texture2D" uid="uid://dbvv22ml151kp" path="res://assets/Map/Back/grassySoil/demo.sprites/-ani-0-9.tres" id="10_6e3ls"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4mlx5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x3w12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_134fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3h7hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6iqg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i626i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_arlcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q0sr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ouv5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ttlty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6e3ls")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BackGround" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4mlx5")

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://in6wla40jsfd"]
+
+[ext_resource type="Texture2D" uid="uid://blan5byd0sh37" path="res://assets/Map/Back/grassySoil/demo.png" id="1_dm8kb"]
+
+[resource]
+atlas = ExtResource("1_dm8kb")
+region = Rect2(977, 1, 43, 110)

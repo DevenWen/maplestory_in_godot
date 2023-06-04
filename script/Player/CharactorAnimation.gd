@@ -9,6 +9,12 @@ extends AnimatedSprite2D
 func _ready():
 	# 注册，并加载数据
 	var wznode = WZLib.get_by_path("Character/00002000.img")
+	
+	if WZLib.is_load_mod_already("00002000"):
+		return
+	
+	WZLib.add_load_mod_already("00002000")
+	
 	for motion in wznode.data._keys:
 		if motion == "info":
 			continue

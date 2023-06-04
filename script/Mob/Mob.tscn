@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://m1f8kfrqrljn"]
+[gd_scene load_steps=10 format=3 uid="uid://m1f8kfrqrljn"]
 
 [ext_resource type="Script" path="res://script/Mob/Mob.gd" id="1_hfdm1"]
 [ext_resource type="Script" path="res://script/Mob/Sprites.gd" id="2_5ifgt"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://script/Mob/States/Idle.gd" id="4_57shp"]
 [ext_resource type="Script" path="res://script/Mob/States/Move.gd" id="6_4l3eb"]
 [ext_resource type="Script" path="res://script/Mob/States/Jump.gd" id="7_alu3w"]
-[ext_resource type="PackedScene" uid="uid://cqn73vgtpfyfc" path="res://script/Mob/AI/mob_ai.tscn" id="8_r0lpq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5khn0"]
 
@@ -15,6 +14,7 @@
 radius = 24.0832
 
 [node name="Mob" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_hfdm1")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
@@ -42,11 +42,10 @@ script = ExtResource("6_4l3eb")
 script = ExtResource("7_alu3w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(0, -24)
 shape = SubResource("CircleShape2D_sbs8i")
-
-[node name="MobAI" parent="." instance=ExtResource("8_r0lpq")]
-actor_node_path = NodePath("../StateMachine")
 
 [connection signal="animation_changed" from="Animation" to="Animation/Marker2D/Sprites" method="_on_animation_animation_changed"]
 [connection signal="frame_changed" from="Animation" to="Animation/Marker2D/Sprites" method="_on_animation_frame_changed"]
