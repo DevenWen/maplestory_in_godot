@@ -41,8 +41,13 @@ godot is powerful game engine. It's nice to create 2D platform game, such as Map
 			- [x]  状态机
 			- [ ]  怪物可以通过状态机控制，由服务端选取一个客户端进行运算。
 
+- [ ] 独立编写输入模块
+
 
 ## Tips
 
 1. 使用 Maker2D 可以完成 Flip 操作
 2. 引入 beehave 行为树
+
+## 输入模块
+1. 在编写 Player 信息的时候，发现输入模块应该需要独立抽象出来。键盘输入和网络输入对 Player 的作用应该是一致的。
