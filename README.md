@@ -35,13 +35,14 @@ godot is powerful game engine. It's nice to create 2D platform game, such as Map
 		- [ ]  NPC
 - [ ]  编写网络模块
 	- [ ]  状态同步
-		- [ ]  人物
-			- [ ]  状态机
-		- [ ]  怪物
-			- [ ]  状态机
+		- [x]  人物
+			- [x]  状态机
+		- [x]  怪物
+			- [x]  状态机
 			- [ ]  怪物可以通过状态机控制，由服务端选取一个客户端进行运算。
 
 
 ## Tips
 
 1. 使用 Maker2D 可以完成 Flip 操作
+2. 引入 beehave 行为树
