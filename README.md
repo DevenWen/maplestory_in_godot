@@ -2,6 +2,7 @@
 
 godot is powerful game engine. It's nice to create 2D platform game, such as MapleStory. I am going to write some GDscript for the Maplestory Role\Mod\BGM etc, so we can use the asset for our own demo games. 
 
+welcome any issues!! 
 
 ## TODO
 
